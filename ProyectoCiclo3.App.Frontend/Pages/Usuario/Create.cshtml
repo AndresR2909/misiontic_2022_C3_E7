@@ -1,0 +1,35 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.FormUsuarioModel
+@{
+}
+ 
+<div class="text-center">
+<form method="POST">
+  <label for="nombre" class="form-label">nombre:</label>
+  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre">
+  <label for="apellidos" class="form-label">apellidos:</label>
+  <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="apellidos">
+  <label for="direccion" class="form-label">direccion:</label>
+  <input type="text" class="form-control" id="direccion" name="direccion" placeholder="direccion">
+  <label for="telefono" class="form-label">telefono:</label>
+  <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono">
+  <label for="ciudad" class="form-label">ciudad:</label>
+  <select name="ciudad" id="ciudad" class="form-control">
+    <option value="Cartagena">Cartagena</option>
+    <option value="Medellin">Medellin</option>
+    <option value="Bogota">Bogota</option>
+    <option value="Pereira">Pereira</option>
+    <option value="Valledupar">Valledupar</option>
+    <option value="Monteria">Monteria</option>
+    <option value="Cali">Cali</option>
+    <option value="Armenia">Armenia</option>
+    <option value="Barranquilla">Barranquilla</option>
+    <option value="Pasto">Pasto</option>
+    <option value="Bucaramanga">Bucaramanga</option>
+    <option value="Manizales">Manizales</option>
+    <option value="Santa Marta">Santa Marta</option>
+  </select>
+  <hr>
+  <button type="submit" class="btn btn-success">Enviar</button>
+</form>
+</div>

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 
 namespace ProyectoCiclo3.App.Frontend
 {
@@ -24,6 +25,9 @@ namespace ProyectoCiclo3.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddSingleton<RepositorioEncomiendas, RepositorioEncomiendas>();
+            services.AddSingleton<RepositorioUsuarios, RepositorioUsuarios>();//cuando se cree reositorios y se ejecuten los mismos pasos semana 4
+            services.AddSingleton<RepositorioServicios, RepositorioServicios>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

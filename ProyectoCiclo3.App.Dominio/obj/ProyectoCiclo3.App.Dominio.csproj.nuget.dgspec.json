@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mario\\Desktop\\81\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {}
+    "C:\\Users\\felip\\OneDrive\\Desktop\\ProyectoGrupo\\misiontic_2022_C3_G81_E7\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mario\\Desktop\\81\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
+    "C:\\Users\\felip\\OneDrive\\Desktop\\ProyectoGrupo\\misiontic_2022_C3_G81_E7\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mario\\Desktop\\81\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\felip\\OneDrive\\Desktop\\ProyectoGrupo\\misiontic_2022_C3_G81_E7\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
         "projectName": "ProyectoCiclo3.App.Dominio",
-        "projectPath": "C:\\Users\\Mario\\Desktop\\81\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mario\\Desktop\\81\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\felip\\OneDrive\\Desktop\\ProyectoGrupo\\misiontic_2022_C3_G81_E7\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felip\\OneDrive\\Desktop\\ProyectoGrupo\\misiontic_2022_C3_G81_E7\\ProyectoCiclo3.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
