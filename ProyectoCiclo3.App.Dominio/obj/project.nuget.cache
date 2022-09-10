@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cLeLO9xMd+jM7wpx3xxLYjAyaeozaK7UaJ9ulhuXDV6Qg7z5SAMuAcebHLdAKBT3uXHL0WB3VPZWnYKSb/aVuA==",
+  "dgSpecHash": "F12fUr1tls3uGnF0LXfLUYC2/nxVPJjFKZ/8WveTf/BftvTC6B1c1oqpVSrNVecMrMrlqbKWGwpXwgMqxrTiAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\felip\\OneDrive\\Desktop\\ProyectoGrupo\\misiontic_2022_C3_G81_E7\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\felip\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\felip\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
