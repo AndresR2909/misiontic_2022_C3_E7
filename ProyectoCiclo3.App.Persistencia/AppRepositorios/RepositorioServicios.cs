@@ -2,46 +2,65 @@ using System.Collections.Generic;
 using ProyectoCiclo3.App.Dominio;
 using System.Linq;
 using System;
- 
+using Microsoft.EntityFrameworkCore;
+
 namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
     public class RepositorioServicios
-    {
-        List<Servicio> servicios;
- 
-    public RepositorioServicios()
-        {
-            servicios= new List<Servicio>()
-            {
-                new Servicio{id=1,origen=new Usuario{id=3,nombre="Pedro",apellidos= "Perez",direccion= "carrera 80 # 2-10",telefono= "2222222", ciudad="Bogota"},destino= new Usuario{id=2,nombre="Julian",apellidos= "Moncada",direccion= "calle 40 # 42-13",telefono= "99999999", ciudad="Medellin"},fecha= DateTime.Now,hora= "3:50", encomienda=new Encomienda{id=3,descripcion="Destornilladores",peso= 130,tipo= "Electronico",presentacion= "Caja"}}
-            };
-        }
- 
+    { 
+        
+        private readonly AppContext _appContext = new AppContext();   
+
         public IEnumerable<Servicio> GetAll()
         {
-            return servicios;
+           return _appContext.Servicios.Include(u => u.origen)
+                                    .Include(u => u.destino)
+                                    .Include(e => e.encomienda);
         }
  
         public Servicio GetWithId(int id){
-            return servicios.SingleOrDefault(e => e.id == id);
+            return _appContext.Servicios.Find(id);
         }
 
-         public Servicio Create(Servicio newServicio)
-        {
-           if(servicios.Count > 0){
-             newServicio.id=servicios.Max(r => r.id) +1;
-            }else{
-               newServicio.id = 1;
+        public Servicio Update(Servicio newServicio){
+            var encomienda = _appContext.Servicios.Find(newServicio.id);
+            if(encomienda != null){
+                encomienda.origen = newServicio.origen;
+                encomienda.destino = newServicio.destino;
+                encomienda.fecha = newServicio.fecha;
+                encomienda.hora = newServicio.hora;
+                encomienda.encomienda = newServicio.encomienda;
+                //Guardar en base de datos
+                 _appContext.SaveChanges();
             }
-           servicios.Add(newServicio);
-           return newServicio;
+        return encomienda;
+        }
+
+        public Servicio Create(int origen, int destino, string fecha, string hora, int encomienda)
+        {
+            var newServicio = new Servicio();
+            newServicio.destino = _appContext.Usuarios.Find(destino);
+            newServicio.origen = _appContext.Usuarios.Find(origen);  
+            newServicio.encomienda = _appContext.Encomiendas.Find(encomienda);         
+            newServicio.fecha = DateTime.Parse(fecha);
+            newServicio.hora = hora;
+
+           var addServicio = _appContext.Servicios.Add(newServicio);
+            //Guardar en base de datos
+            _appContext.SaveChanges();
+            return addServicio.Entity;
         }
 
         public Servicio Delete(int id)
         {
-            var servicio = servicios.SingleOrDefault(e => e.id == id);
-            servicios.Remove(servicio);
-            return servicio;
+            var encomienda = _appContext.Servicios.Find(id);
+        if (encomienda != null){
+            _appContext.Servicios.Remove(encomienda);
+            //Guardar en base de datos
+            _appContext.SaveChanges();
         }
+         return null;  
+        }
+
     }
 }
