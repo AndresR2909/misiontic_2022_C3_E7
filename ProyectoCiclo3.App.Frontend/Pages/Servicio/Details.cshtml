@@ -6,9 +6,11 @@
  
 <ul class="list-group list-group-flush">
   <li class="list-group-item"> <b>id: </b> @servicio.id</li>
-  <li class="list-group-item"> <b>origen: </b> @servicio.origen</li>
-  <li class="list-group-item"> <b>destino: </b> @servicio.destino</li>
-  <li class="list-group-item"><b>fecha: </b> @servicio.fecha</li>
+  <li class="list-group-item"> <b>origen: </b> @servicio.origen.nombre @servicio.origen.apellidos</li>
+  <li class="list-group-item"> <b>destino: </b> @servicio.destino.nombre @servicio.destino.apellidos</li>
+  <li class="list-group-item"><b>fecha: </b> @servicio.fecha.ToString("MMMM dd, yyyy")</li>
   <li class="list-group-item"><b>hora: </b> @servicio.hora</li>
-   <li class="list-group-item"><b>encomienda: </b> @servicio.encomienda</li>
+   <li class="list-group-item"><b>encomienda: </b> @servicio.encomienda.descripcion</li>
+   <li class="list-group-item"><b>tipo: </b> @servicio.encomienda.tipo</li>
+   <li class="list-group-item"><b>presentacion: </b> @servicio.encomienda.presentacion</li>
 </ul>  
